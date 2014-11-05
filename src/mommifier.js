@@ -1,9 +1,12 @@
+function isVowel(char) {
+  return ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'].indexOf(char) >= 0;
+}
+
 function mommify(str){
-  var vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'],
-      strList = str.split(''),
+  var strList = str.split(''),
       result = "";
       strList.forEach(function(str){
-        result += vowels.indexOf(str) >= 0 ? 'mommy' : str;
+        result += isVowel(str) ? 'mommy' : str;
       })
   return result;
 }
