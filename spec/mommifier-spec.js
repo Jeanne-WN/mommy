@@ -35,4 +35,13 @@ describe('Mommifier',function(){
     expect(result).toBe(expectedResult);
   });
 
+
+  it('should return ship when given ship', function(){
+    var str = 'ship',
+        expectedResult = 'ship';
+
+    var result = mommify(str);
+
+    expect(result).toBe(expectedResult);
+  });
 });
