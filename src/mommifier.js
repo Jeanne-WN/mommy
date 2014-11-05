@@ -1,3 +1,3 @@
 function mommify(str){
-  return 'h';
+  return str;
 }
