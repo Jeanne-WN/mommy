@@ -25,4 +25,14 @@ describe('Mommifier',function(){
       expect(result).toBe(expectedResult);
     });
   });
+
+  it('should return mmommy when given ma', function(){
+    var str = 'ma',
+        expectedResult = 'mmommy';
+
+    var result = mommify(str);
+
+    expect(result).toBe(expectedResult);
+  });
+
 });
