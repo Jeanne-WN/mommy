@@ -44,4 +44,13 @@ describe('Mommifier',function(){
 
     expect(result).toBe(expectedResult);
   });
+
+  it('should return hmommy when given hear', function(){
+    var str = 'hear',
+        expectedResult = 'hmommyr';
+
+    var result = mommify(str);
+
+    expect(result).toBe(expectedResult);
+  });
 });

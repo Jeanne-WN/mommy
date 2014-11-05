@@ -18,9 +18,14 @@ function mommify(str){
       result = "";
 
   if( shouldMommify(str) ){
-    strList.forEach(function(char){
-      result += isVowel(char) ? 'mommy' : char;
-    })
+    strList.reduce(function(mommified, char){
+      if(isVowel(char)){
+        result += mommified ? '' : 'mommy';
+        return true;
+      }
+      result += char;
+      return false;
+    }, false);
     return result;
   }
   return str;
